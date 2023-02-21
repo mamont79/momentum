@@ -10,7 +10,7 @@
     <title>momentum</title>
 </head>
 
-<body>
+<body class="body">
     <header class="header">
         <div class="player">
             <div class="player-controls">
@@ -21,7 +21,7 @@
             <ul class="play-list"></ul>
         </div>
         <div class="weather">
-            <input type="text" class="city" />
+            <input type="text" class="city" onchange="getWether(this.value)" />
             <i class="weather-icon owf"></i>
             <div class="weather-error"></div>
             <div class="description-container">
@@ -51,8 +51,12 @@
             <div class="author"></div>
         </div>
     </footer>
+
     <script src="js/time.js"></script>
     <script src="js/greeting.js"></script>
+    <script src="js/bg.js"></script>
+    <script src="js/weather.js"></script>
+
 </body>
 
 </html>

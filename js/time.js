@@ -5,7 +5,7 @@ const date = document.querySelector(".date");
 date.textContent = "Text";
 
 const options = { month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'UTC' };
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 function showTime() {
@@ -23,7 +23,7 @@ function showDate() {
     const currentDay = date1.getDay();
     const currentMonth = date1.getMonth();
     const currentDate = date1.getDate();
-    date.textContent = days[currentDay - 1] + ', ' + months[currentMonth] + ' ' + currentDate;
+    date.textContent = days[currentDay] + ', ' + months[currentMonth] + ' ' + currentDate;
 
 
 }
@@ -33,4 +33,5 @@ function showDate() {
 // const currentDate = date2.toLocaleDateString('en-Br', options);
 // console.log(currentDate);
 
+//console.log(currentDay)
 showTime();
