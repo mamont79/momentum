@@ -3,8 +3,8 @@ greeting.textContent = "Text";
 
 const name = document.querySelector(".name");
 
-const dateH = new Date();
-const hours = dateH.getHours();
+
+//const hours = dateH.getHours();
 
 function showGreeting() {
     const timeOfDay = getTimeOfDay();
@@ -13,12 +13,14 @@ function showGreeting() {
 }
 
 function getTimeOfDay() {
+    const dateH = new Date();
+    const hours = dateH.getHours();
     if (hours < 6) {
         return "night";
     } else if (hours < 12) {
         return "morning";
     } else if (hours < 18) {
-        return "day";
+        return "afternoon";
     } else {
         return "evening";
     }
@@ -27,14 +29,14 @@ function getTimeOfDay() {
 function setLocalStorage() {
     localStorage.setItem('name', name.value);
 }
-window.addEventListener('beforeunload', setLocalStorage)
+window.addEventListener('beforeunload', setLocalStorage);
 
 function getLocalStorage() {
     if (localStorage.getItem('name')) {
         name.value = localStorage.getItem('name');
     }
 }
-window.addEventListener('load', getLocalStorage)
+window.addEventListener('load', getLocalStorage);
 
 
 
