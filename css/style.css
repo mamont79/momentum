@@ -259,6 +259,7 @@ body {
 
 .quote {
     min-height: 32px;
+    font-size: 24px;
 }
 
 .author {
