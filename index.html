@@ -21,7 +21,7 @@
             <ul class="play-list"></ul>
         </div>
         <div class="weather">
-            <input type="text" class="city" onchange="getWether(this.value)" />
+            <input type="text" class="city" id="city" onchange="this.value" />
             <i class="weather-icon owf"></i>
             <div class="weather-error"></div>
             <div class="description-container">
@@ -34,29 +34,29 @@
     </header>
     <main class="main">
         <div class="slider-icons">
-            <button class="slide-prev slider-icon"></button>
-            <button class="slide-next slider-icon"></button>
+            <button class="slide-prev slider-icon" onclick="getSlidePrev()"></button>
+            <button class="slide-next slider-icon" onclick="getSlideNext()"></button>
         </div>
-        <time class="time"></time>
-        <date class="date"></date>
-        <div class="greeting-container">
-            <span class="greeting"></span>
-            <input type="text" class="name" />
+        <time class=" time "></time>
+        <date class="date "></date>
+        <div class="greeting-container ">
+            <span class="greeting "></span>
+            <input type="text " class="name " />
         </div>
     </main>
-    <footer class="footer">
-        <button class="change-quote"></button>
+    <footer class="footer ">
+        <button class="change-quote " onclick="getQuotes()"></button>
         <div>
-            <div class="quote"></div>
-            <div class="author"></div>
+            <div class="quote "></div>
+            <div class="author "></div>
         </div>
     </footer>
 
-    <script src="js/time.js"></script>
-    <script src="js/greeting.js"></script>
-    <script src="js/bg.js"></script>
-    <script src="js/weather.js"></script>
-
+    <script src="js/time.js "></script>
+    <script src="js/greeting.js "></script>
+    <script src="js/bg.js "></script>
+    <script src="js/weather.js "></script>
+    <script src="js/thoughts.js"></script>
 </body>
 
 </html>
